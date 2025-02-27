@@ -1,0 +1,42 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Voice Form</title>
+    <style>
+        body { font-family: Arial, sans-serif; text-align: center; margin-top: 50px; }
+        input { padding: 10px; margin: 10px; width: 80%; }
+        button { padding: 10px 20px; }
+    </style>
+</head>
+<body>
+    <h2>Voice-Activated Form</h2>
+    <input type="text" id="name" placeholder="Name"><br>
+    <input type="text" id="email" placeholder="Email"><br>
+    <button onclick="startRecognition()">Speak</button>
+    
+    <script>
+        var recognition;
+        if ('webkitSpeechRecognition' in window) {
+            recognition = new webkitSpeechRecognition();
+            recognition.continuous = false;
+            recognition.interimResults = false;
+            recognition.lang = "en-US";
+
+            recognition.onresult = function(event) {
+                var transcript = event.results[0][0].transcript;
+                var activeField = document.activeElement;
+                activeField.value = transcript;
+            };
+        } else {
+            alert("Speech Recognition not supported in this browser.");
+        }
+
+        function startRecognition() {
+            if (recognition) {
+                recognition.start();
+            }
+        }
+    </script>
+</body>
+</html>
