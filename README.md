@@ -5,3 +5,5 @@ MODEL RESEARCH: https://drive.google.com/file/d/1uZe-8UYb7ekx7H2hRHUM-mAxc7yWAWo
     Deployment Link: https://beyond-qwerty.vercel.app/
      Demo Link:
      https://screenrec.com/share/hixcngCb6Y
+      Agile_Template:
+      https://docs.google.com/spreadsheets/d/16dSLreYhf8-P1ZfaVFKv1JqQ-jJFNS_D/edit?usp=drivesdk&ouid=107846972475112519322&rtpof=true&sd=true
